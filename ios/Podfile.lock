@@ -1,0 +1,28 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_custom_tabs (0.0.1):
+    - Flutter
+  - url_launcher (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `.symlinks/flutter/ios`)
+  - flutter_custom_tabs (from `.symlinks/plugins/flutter_custom_tabs/ios`)
+  - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+  flutter_custom_tabs:
+    :path: ".symlinks/plugins/flutter_custom_tabs/ios"
+  url_launcher:
+    :path: ".symlinks/plugins/url_launcher/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
+  flutter_custom_tabs: 8dcb85ffe874ee8fd8139bb3960743efeaf521ee
+  url_launcher: 92b89c1029a0373879933c21642958c874539095
+
+PODFILE CHECKSUM: 7765ea4305eaab0b3dfd384c7de11902aa3195fd
+
+COCOAPODS: 1.5.3
