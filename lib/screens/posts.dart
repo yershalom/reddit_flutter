@@ -55,7 +55,7 @@ class PostsList extends StatelessWidget {
           var cardContent = new Container(
             padding: EdgeInsets.all(10.0),
             margin: EdgeInsets.all(5.0),
-            height: 100.0,
+            height: 105.0,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
