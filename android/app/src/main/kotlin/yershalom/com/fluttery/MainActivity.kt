@@ -1,4 +1,4 @@
-package yershalom.com.redditflutter
+package yershalom.com.fluttery
 
 import android.os.Bundle
 

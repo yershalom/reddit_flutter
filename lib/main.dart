@@ -1,6 +1,5 @@
+import 'package:Fluttery/screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:reddit_flutter/screens/topics.dart';
-
 
 void main() => runApp(new MyApp());
 
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TopicScreen(),
+      home: HomeScreen(),
     );
   }
 }

@@ -1,4 +1,4 @@
-# reddit_flutter
+# Fluttery
 
 A new Flutter application.
 

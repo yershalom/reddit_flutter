@@ -27,9 +27,9 @@ class Posts {
 
   factory Posts.fromJson(Map<String, dynamic> json) {
     return Posts(
-        title: json['title'],
-        permalink: json['permalink'],
-        score: json['score'].toString()
+      title: json['title'],
+      permalink: json['permalink'],
+      score: json['score'].toString()
     );
   }
 }

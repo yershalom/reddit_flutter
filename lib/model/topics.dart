@@ -28,10 +28,10 @@ class Topics {
 
   factory Topics.fromJson(Map<String, dynamic> json) {
     return Topics(
-        url: json['url'],
-        displayName: json['display_name'],
-        publicDescription: json['public_description'],
-        iconImg: json['icon_img']
+      url: json['url'],
+      displayName: json['display_name'],
+      publicDescription: json['public_description'],
+      iconImg: json['icon_img']
     );
   }
 }
