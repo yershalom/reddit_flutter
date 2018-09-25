@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-import 'dart:ui' as ui;
 
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +10,7 @@ class ImageScreen extends StatefulWidget {
 
 class ImageScreenState extends State<ImageScreen> {
   File _image;
+  int _direction = 0;
 
   Future getImage() async {
     var image = await ImagePicker.pickImage(source: ImageSource.camera);
@@ -25,20 +25,47 @@ class ImageScreenState extends State<ImageScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Picky'),
+        actions:  <Widget>[
+          new IconButton(icon: Icon(Icons.add_a_photo), onPressed: getImage),
+        ],
       ),
       body: Container(
         padding: EdgeInsets.all(10.0),
         child: _image == null
-        ? Center(
+          ? Center(
           child: Text('No Image Selected'),
         )
-        : Image.file(_image),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: getImage,
-        tooltip: 'Pick an Image',
-        child: Icon(Icons.add_a_photo),
+          : Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              RotatedBox(
+                quarterTurns: _direction,
+                child: Image.file(_image)
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  IconButton(
+                    onPressed: () => rotateImage(-1),
+                    icon: Icon(Icons.rotate_left),
+                  ),
+                  IconButton(
+                    onPressed: () => rotateImage(1),
+                    icon: Icon(Icons.rotate_right),
+                  ),
+                ],
+              )
+            ],
+          ),
+        )
       ),
     );
+  }
+
+  rotateImage(int direction) {
+    setState(() {
+      _direction = _direction + direction;
+    });
   }
 }
