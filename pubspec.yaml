@@ -43,8 +43,6 @@ flutter:
   assets:
   - assets/reddit.png
   - assets/SpaceX-logo.png
-  - assets/crypto.png
-  #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
