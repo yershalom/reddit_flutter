@@ -35,14 +35,17 @@ class ImageScreenState extends State<ImageScreen> {
           ? Center(
           child: Text('No Image Selected'),
         )
-          : Container(
+          : SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               RotatedBox(
                 quarterTurns: _direction,
                 child: Image.file(_image)
               ),
+              Flexible(
+                child:
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -55,6 +58,7 @@ class ImageScreenState extends State<ImageScreen> {
                     icon: Icon(Icons.rotate_right),
                   ),
                 ],
+              )
               )
             ],
           ),

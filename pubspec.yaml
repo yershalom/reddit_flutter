@@ -22,6 +22,7 @@ dependencies:
   flutter_custom_tabs: ^0.4.0
   image_picker: ^0.4.10
   font_awesome_flutter: ^8.0.1
+  http: ^0.12.0+1
 
 dev_dependencies:
   flutter_test:
