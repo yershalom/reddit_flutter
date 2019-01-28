@@ -8,6 +8,7 @@ import 'package:image/image.dart' as image;
 import 'package:path_provider/path_provider.dart';
 
 class ImageScreen extends StatefulWidget {
+  ImageScreen({ Key key }) : super(key: key);
   ImageScreenState createState() => new ImageScreenState();
 }
 
@@ -144,7 +145,7 @@ class ImageScreenState extends State<ImageScreen> {
 
   drawImage(FilterOptions newFilter) {
     filter = newFilter;
-    double width = MediaQuery.of(context).size.width;
+//    double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     setState(() {
       _filterState = newFilter;
@@ -174,7 +175,7 @@ class FilterButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var directory = getApplicationDocumentsDirectory();
+//    var directory = getApplicationDocumentsDirectory();
     return GestureDetector(
       onTap: onTap,
       child: Padding(
