@@ -11,22 +11,26 @@ class TopicScreen extends StatefulWidget {
 
 class TopicScreenState extends State<TopicScreen> {
 
+  _renderBody() {
+    return FutureBuilder<List<Topics>>(
+      future: fetchTopics(http.Client()),
+      builder: (context, snapshot) {
+        if (snapshot.hasError) print(snapshot.error);
+
+        return snapshot.hasData
+          ? TopicsList(topics: snapshot.data)
+          : Center(child: CircularProgressIndicator());
+      }
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Reddit Flutter'),
       ),
-      body: FutureBuilder<List<Topics>>(
-        future: fetchTopics(http.Client()),
-        builder: (context, snapshot) {
-          if (snapshot.hasError) print(snapshot.error);
-
-          return snapshot.hasData
-            ? TopicsList(topics: snapshot.data)
-            : Center(child: CircularProgressIndicator());
-        }
-      ),
+      body: _renderBody()
     );
   }
 }
@@ -87,6 +91,5 @@ class TopicsList extends StatelessWidget {
         );
       }
     );
-
   }
 }

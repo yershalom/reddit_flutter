@@ -13,7 +13,6 @@ class HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: new Stack(
         children: <Widget>[
           new Offstage(
