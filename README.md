@@ -1,6 +1,6 @@
 # Fluttery
 
-A new Flutter application.
+A new Flutter application - [Hackernoon Post](https://hackernoon.com/i-love-you-flutter-fd7c30b2047e)
 
 ## Getting Started
 
