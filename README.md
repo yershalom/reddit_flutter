@@ -5,7 +5,7 @@ A new Flutter application - [Hackernoon Post](https://hackernoon.com/i-love-you-
 ## Getting Started
 
 For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+[documentation](https://flutter.dev/docs).
 
 ## APK (Android)
 [Download App (Android)](https://rink.hockeyapp.net/api/2/apps/9a9d590c8845483a8045599576848aba/app_versions/4?format=apk&avtoken=d7ad2058e4a2541e3278811a5a06dd090f7d781e)
